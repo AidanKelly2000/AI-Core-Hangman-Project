@@ -16,3 +16,9 @@
 - The final step of milestone 2 was to create this README.md file, in order to log all of the stages of creating this Hangman game.
 
 ## Milestone 3
+
+- Two functions were defined, one checked if the guess was correct. If the guess was correct the program said "Good guess! {guess} is in the word." if not it would say "Sorry, {guess} is not in the word. Try again.". This check_guess function takes in the randomly selected word from word_list, and then checks if the guessed letter is in that word.
+
+- The second function defines the conditions of the guess input, the function was called "ask_for_input". This function tells the user if the guess meets the requirements of the game i.e. is it a single alphabetic input.
+
+- Finally the check_guess function was called within the ask_for_input function, but not in the while loop. Then outside of the function the ask_for_input function was called, and the code was tested to make sure it worked.
