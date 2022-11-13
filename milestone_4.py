@@ -10,3 +10,8 @@ class Hangman:
         self.num_letters = len(self.word)
         self.list_of_guesses = []
         word_list = ["mangoes", "bananas", "grapes", "strawberries", "oranges"]
+
+    def check_guess(self, guess):
+        guess = guess.lower()
+        if guess in self.word:
+            print(f"Good guess! {guess} is in the word.")
