@@ -22,3 +22,7 @@
 - The second function defines the conditions of the guess input, the function was called "ask_for_input". This function tells the user if the guess meets the requirements of the game i.e. is it a single alphabetic input.
 
 - Finally the check_guess function was called within the ask_for_input function, but not in the while loop. Then outside of the function the ask_for_input function was called, and the code was tested to make sure it worked.
+
+## Milestone 4
+
+- add description of milestone_4.py
