@@ -18,7 +18,9 @@ class Hangman:
             for letter in self.word:
                 if letter == guess:
                     position = self.word.find(letter)
+                    print(position)
                     self.word_guessed[position] = letter
+                    print(self.word_guessed)
             self.num_letters -= 1
 
         else:
@@ -40,9 +42,23 @@ class Hangman:
                 print("You already tried that letter!")
 
             else:
-                game.check_guess(guess)
+                print(self.word_guessed)
+                self.check_guess(guess)
                 self.list_of_guesses += [guess]
 
+def play_game():
+    game = Hangman(["cherries", "bananas", "figs", "strawberries", "blueberries"], 7)
 
-game = Hangman()  # if you pass a new list and number of lives in the parenthesis of this object's(game) class, it will overwrite the pre defined parameters in the classes initialiser 
-game.ask_for_input()
+    while True:
+        if game.num_lives == 0:
+            print("You lost!")
+        elif game.num_letters > 0:
+            game.ask_for_input()
+        else:
+            print("Congratulations. You won the game!")
+
+
+
+play_game()
+# game = Hangman()  # if you pass a new list and a new number of lives in the parenthesis of this object's(game) class, it will overwrite the pre defined parameters in the classes initialiser 
+# game.ask_for_input()
